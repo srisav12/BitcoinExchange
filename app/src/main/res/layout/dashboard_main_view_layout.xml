@@ -26,90 +26,78 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:focusableInTouchMode="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <android.support.design.widget.AppBarLayout
+
+        <FrameLayout
+            android:id="@+id/frame"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomTabLayout">
+
+        </FrameLayout>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/bottomTabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/light_background_color">
+            <TextView
+                android:id="@+id/tab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/home"
+                android:textSize="@dimen/sp_10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawableTop="@mipmap/ic_home"
+                android:padding="@dimen/dp_5"
+                android:maxLines="1"
+                android:textColor="@color/tab_text_color"
+                android:background="@drawable/press_tab_bg"/>
+
+            <TextView
+                android:id="@+id/tab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/tcp_wallet"
+                android:textSize="@dimen/sp_10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="@dimen/dp_5"
+                android:drawableTop="@mipmap/ic_wallet"
+                android:textColor="@color/tab_text_color"
+                android:background="@drawable/press_tab_bg"/>
+
+            <TextView
+                android:id="@+id/tab3"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:background="@color/light_background_color">
-                <TextView
-                    android:id="@+id/tab1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/home"
-                    android:textSize="@dimen/sp_12"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textAllCaps="true"
-                    android:maxLines="1"
-                    android:layout_marginLeft="@dimen/dp_8"
-                    android:layout_marginRight="@dimen/dp_8"
-                    android:layout_marginTop="@dimen/dp_8"
-                    android:layout_marginBottom="@dimen/dp_8"
-                    android:padding="@dimen/dp_5"
-                    android:textColor="@color/tab_text_color"
-                    android:background="@drawable/press_tab_bg"/>
-
-                <TextView
-                    android:id="@+id/tab2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tcp_wallet"
-                    android:textSize="@dimen/sp_12"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textAllCaps="true"
-                    android:maxLines="1"
-                    android:layout_marginLeft="@dimen/dp_8"
-                    android:layout_marginRight="@dimen/dp_8"
-                    android:layout_marginTop="@dimen/dp_8"
-                    android:layout_marginBottom="@dimen/dp_8"
-                    android:padding="@dimen/dp_5"
-                    android:textColor="@color/tab_text_color"
-                    android:background="@drawable/press_tab_bg"/>
-
-                <TextView
-                    android:id="@+id/tab3"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/secure_wallet"
-                    android:textSize="@dimen/sp_12"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:textAllCaps="true"
-                    android:maxLines="2"
-                    android:layout_marginLeft="@dimen/dp_8"
-                    android:layout_marginRight="@dimen/dp_8"
-                    android:layout_marginTop="@dimen/dp_8"
-                    android:layout_marginBottom="@dimen/dp_8"
-                    android:padding="@dimen/dp_5"
-                    android:textColor="@color/tab_text_color"
-                    android:background="@drawable/press_tab_bg"/>
-            </LinearLayout>
+                android:text="@string/secure_wallet"
+                android:textSize="@dimen/sp_10"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:maxLines="2"
+                android:padding="@dimen/dp_5"
+                android:drawableTop="@mipmap/ic_wallet"
+                android:textColor="@color/tab_text_color"
+                android:background="@drawable/press_tab_bg"/>
+        </LinearLayout>
         </android.support.design.widget.AppBarLayout>
 
-        <android.support.v4.widget.NestedScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <FrameLayout
-                android:id="@+id/frame"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            </FrameLayout>
-        </android.support.v4.widget.NestedScrollView>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 
 

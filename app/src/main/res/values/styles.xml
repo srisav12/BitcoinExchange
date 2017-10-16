@@ -13,17 +13,17 @@
     <style name="LoginScreenTheme" parent="AppTheme">
         <item name="android:windowBackground">@color/login_screen_color</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/login_screen_color</item>
-        <item name="colorControlNormal">#d3d3d3</item>
-        <item name="colorControlActivated">#d3d3d3</item>
-        <item name="colorControlHighlight">#d3d3d3</item>
+        <item name="colorControlNormal">@color/login_signup_control_color</item>
+        <item name="colorControlActivated">@color/login_signup_control_color</item>
+        <item name="colorControlHighlight">@color/login_signup_control_color</item>
     </style>
     
     <style name="SignUpScreenTheme" parent="AppTheme">
         <item name="android:windowBackground">@color/signup_screen_color</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/signup_screen_color</item>
-        <item name="colorControlNormal">#d3d3d3</item>
-        <item name="colorControlActivated">#d3d3d3</item>
-        <item name="colorControlHighlight">#d3d3d3</item>
+        <item name="colorControlNormal">@color/login_signup_control_color</item>
+        <item name="colorControlActivated">@color/login_signup_control_color</item>
+        <item name="colorControlHighlight">@color/login_signup_control_color</item>
     </style>
 
     <style name="RecoveryScreenTheme" parent="LoginScreenTheme">
@@ -38,6 +38,13 @@
     <style name="SecurityPinTheme" parent="AppTheme">
         <item name="android:windowBackground">@android:color/holo_blue_dark</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/holo_blue_dark</item>
+    </style>
+
+    <style name="TransactionTheme" parent="DashboardTheme">
+        <item name="android:windowBackground">@color/light_grey_bg_color</item>
+        <item name="colorControlNormal">@color/transaction_control_color</item>
+        <item name="colorControlActivated">@color/transaction_control_color</item>
+        <item name="colorControlHighlight">@color/transaction_control_color</item>
     </style>
 
 </resources>

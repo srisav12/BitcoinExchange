@@ -3,9 +3,12 @@
     package="com.bitcoinexchange">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
+        android:name=".splash_screen.utils.AppController"
         android:icon="@mipmap/ic_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
@@ -53,6 +56,34 @@
         <activity android:name=".splash_screen.security_pin_login_screen.SecurityPinLoginScreen"
             android:screenOrientation="portrait"
             android:theme="@style/SecurityPinTheme"/>
+
+        <activity android:name=".splash_screen.change_password_screen.ChangePasswordScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.send_tpc_to_other_screen.SendTPCtoOtherScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.send_tpc_to_secure_wallet_screen.SendTPCtoSecureWalletScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.transaction_details_screen.TransactionDetailsScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.transaction_history_screen.TransactionHistoryScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.update_profile_screen.UpdateProfileScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
+
+        <activity android:name=".splash_screen.change_transacion_password_screen.ChangeTransactionPasswordScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransactionTheme"/>
     </application>
 
 </manifest>

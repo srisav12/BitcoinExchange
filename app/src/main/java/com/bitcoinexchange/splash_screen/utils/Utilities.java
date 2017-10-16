@@ -51,7 +51,7 @@ public class Utilities {
     }
 
 
-    public static void shareTextUrl(Context context) {
+    public static void shareTextUrl(Context context, String msg, String address) {
         Intent share = new Intent(android.content.Intent.ACTION_SEND);
         share.setType("text/plain");
         share.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
@@ -59,9 +59,8 @@ public class Utilities {
         // Add data to the intent, the receiving app will decide
         // what to do with it.
         final String appPackageName = BuildConfig.APPLICATION_ID;
-        share.putExtra(Intent.EXTRA_TEXT, "Hey! Found this Android app \n https://play.google.com/store/apps/details?id=" +
-                appPackageName);
+        share.putExtra(Intent.EXTRA_TEXT, msg+"\n"+address);
 
-        context.startActivity(Intent.createChooser(share, "Share link!"));
+        context.startActivity(Intent.createChooser(share, "Share with"));
     }
 }

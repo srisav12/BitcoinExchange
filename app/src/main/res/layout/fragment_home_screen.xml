@@ -1,111 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="@dimen/dp_10"
-        android:background="@color/colorPressed">
-
-        <TextView
-            android:id="@+id/welcomeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:text="Welcome"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/sp_16" />
-
-        <TextView
-            android:id="@+id/userNameLable"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/welcomeText"
-            android:layout_centerHorizontal="true"
-            android:text="name"
-            android:textAllCaps="true"
-            android:textColor="@color/colorAccent"
-            android:textSize="@dimen/sp_20" />
-
-        <LinearLayout
-            android:id="@+id/balanceLayout"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/userNameLable"
-            android:orientation="horizontal"
-            android:layout_marginTop="@dimen/dp_5"
             android:paddingTop="@dimen/dp_10"
-            android:paddingBottom="@dimen/dp_10">
+            android:background="@color/colorPressed">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Welcome"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/userNameLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcomeText"
+                android:layout_centerHorizontal="true"
+                android:text="name"
+                android:textAllCaps="true"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/sp_20" />
 
             <LinearLayout
+                android:id="@+id/balanceLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="5dp">
-                <TextView
-                    android:id="@+id/tcpWalletBalance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="01.3334340"
-                    android:maxLines="1"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="26sp" />
+                android:layout_below="@+id/userNameLable"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10">
 
-                <TextView
-                    android:id="@+id/tcpWalletText"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="TCP Wallet Balance"
-                    android:textColor="@color/text_hint_color"
-                    android:textSize="12sp" />
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <TextView
+                        android:id="@+id/tcpWalletBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01.3334340"
+                        android:maxLines="1"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/tcpWalletText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TCP Wallet Balance"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="5dp">
+                    <TextView
+                        android:id="@+id/secureWalletBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01.33343"
+                        android:maxLines="1"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="26sp" />
+
+                    <TextView
+                        android:id="@+id/secureWalletText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Secure Wallet Balance"
+                        android:maxLines="1"
+                        android:textColor="@color/text_hint_color"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
             </LinearLayout>
 
-
-
-            <LinearLayout
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:padding="5dp">
-                <TextView
-                    android:id="@+id/secureWalletBalance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="01.33343"
-                    android:maxLines="1"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="26sp" />
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_green"
+                android:layout_below="@id/balanceLayout"/>
+        </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/secureWalletText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Secure Wallet Balance"
-                    android:maxLines="1"
-                    android:textColor="@color/text_hint_color"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <View
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/transactionsListView"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_1"
-            android:background="@color/color_green"
-            android:layout_below="@id/balanceLayout"/>
-    </RelativeLayout>
+            android:layout_height="match_parent"/>
+    </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/transactionsListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
-</LinearLayout>
+</android.support.v4.widget.NestedScrollView>

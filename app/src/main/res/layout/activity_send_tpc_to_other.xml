@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/sendTCPToolbar"/>
+
+    <TextView
+        android:id="@+id/toHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/to_text"
+        android:textColor="@color/text_dark_grey_color"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_30"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:layout_below="@id/sendTCPToolbar"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/receiverAddIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/receiver_address_hint"
+        android:textColorHint="@color/dark_grey_text"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_below="@id/toHeader"
+        android:layout_toLeftOf="@+id/addressScannerIcon">
+        <EditText
+            android:id="@+id/receiverAddressET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_dark_grey_color"
+            android:inputType="text"
+            android:maxLines="1"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/addressScannerIcon"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:contentDescription="@string/scanner_image"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/receiverAddIL"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:src="@mipmap/barcode"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/sendingAmtIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount_hint"
+        android:textColorHint="@color/dark_grey_text"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_below="@id/receiverAddIL">
+        <EditText
+            android:id="@+id/amountET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_dark_grey_color"
+            android:inputType="numberDecimal"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/remarksIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/remarks"
+        android:textColorHint="@color/dark_grey_text"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_below="@id/sendingAmtIL">
+        <EditText
+            android:id="@+id/remarksET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/text_dark_grey_color"
+            android:inputType="textMultiLine"
+            android:maxLines="3" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/sendBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:text="@string/send"
+        android:layout_below="@id/remarksIL"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/wallet_screen_buttons_bg"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"/>
+
+    <Button
+        android:id="@+id/transactionHistoryBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:text="@string/transaction_history"
+        android:layout_below="@id/sendBtn"
+        android:textColor="@color/colorAccent"
+        android:background="@drawable/wallet_screen_buttons_bg"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_30"/>
+
+</RelativeLayout>

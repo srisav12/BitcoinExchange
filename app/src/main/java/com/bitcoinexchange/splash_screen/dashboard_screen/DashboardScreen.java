@@ -1,5 +1,7 @@
 package com.bitcoinexchange.splash_screen.dashboard_screen;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,6 +17,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.bitcoinexchange.R;
+import com.bitcoinexchange.splash_screen.change_password_screen.ChangePasswordScreen;
+import com.bitcoinexchange.splash_screen.change_transacion_password_screen.ChangeTransactionPasswordScreen;
+import com.bitcoinexchange.splash_screen.transaction_history_screen.TransactionHistoryScreen;
 
 /**
  * Created by Shashank Rawat on 10/8/2017.
@@ -22,11 +27,13 @@ import com.bitcoinexchange.R;
 
 public class DashboardScreen extends AppCompatActivity implements View.OnClickListener {
 
+    private Context context;
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private Toolbar toolbar;
     private TextView tab1, tab2, tab3;
     private Fragment fragment;
+    private boolean isHome;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,11 +49,12 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
                 return;
             }
             tab1.performClick();
-            navigationView.getMenu().getItem(0).setChecked(true);
+
         }
     }
 
     private void viewInitialisation() {
+        context = this;
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         toolbar = (Toolbar) findViewById(R.id.dashBoardToolbar);
@@ -101,8 +109,26 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
     NavigationView.OnNavigationItemSelectedListener itemSelectedListener = new NavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-
             drawer.closeDrawer(Gravity.START);
+
+            switch (item.getItemId())
+            {
+                case R.id.nav_home:
+                    tab1.performClick();
+                    break;
+                case R.id.nav_history:
+                    Intent historyIntent = new Intent(context, TransactionHistoryScreen.class);
+                    startActivity(historyIntent);
+                    break;
+                case R.id.nav_change_password:
+                    Intent changePassIntent = new Intent(context, ChangePasswordScreen.class);
+                    startActivity(changePassIntent);
+                    break;
+                case R.id.nav_change_trans_password:
+                    Intent chngTransPassIntent = new Intent(context, ChangeTransactionPasswordScreen.class);
+                    startActivity(chngTransPassIntent);
+                    break;
+            }
             return true;
         }
     };
@@ -113,9 +139,11 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
         {
             case R.id.tab1:
                 if(!tab1.isSelected()) {
+                    navigationView.getMenu().getItem(0).setChecked(true);
                     tab1.setSelected(true);
                     tab2.setSelected(false);
                     tab3.setSelected(false);
+                    isHome = true;
 
                     fragment = new HomeFragment();
                     if (getSupportFragmentManager().findFragmentById(R.id.frame) == null) {
@@ -131,6 +159,10 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
                     tab1.setSelected(false);
                     tab2.setSelected(true);
                     tab3.setSelected(false);
+                    isHome = false;
+
+                    fragment = new TPCWalletFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment).commit();
                 }
                 break;
 
@@ -139,8 +171,22 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
                     tab1.setSelected(false);
                     tab2.setSelected(false);
                     tab3.setSelected(true);
+                    isHome = false;
+
+                    fragment = new SecureWalletFragment();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment).commit();
                 }
                 break;
+        }
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if (isHome){
+            super.onBackPressed();
+        }else {
+            tab1.performClick();
         }
     }
 }

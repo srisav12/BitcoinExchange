@@ -59,6 +59,15 @@
     <string name="tcp_wallet">TCP Wallet</string>
     <string name="secure_wallet">Secure Wallet</string>
     <string name="dollar">$ </string>
+    <string name="qrcode_share">(click on QR Code to share)</string>
+    <string name="tpcbalance">TPC Balance</string>
+    <string name="mytpc_address">My TPC Address</string>
+    <string name="sendtpc">Send TPC</string>
+    <string name="receivetpc">Receive TPC</string>
+    <string name="send_btc">Send BTC</string>
+    <string name="receive_btc">Receive BTC</string>
+    <string name="my_btc_address">My BTC Address</string>
+    <string name="btc_balance">BTC Balance</string>
 
 
     <!--security pin screen strings-->
@@ -72,10 +81,22 @@
 
 
 
+    <!--send tpc screen strings-->
+    <string name="to_text">To \n\nEnter TPC address of person to whome you want to send TPC</string>
+    <string name="receiver_address_hint">Enter the receiver address</string>
+    <string name="amount_hint">Enter Amount</string>
+    <string name="remarks">Remarks</string>
+    <string name="transaction_history">Transaction History</string>
+    <string name="send">Send</string>
+
+
+    <!--change transaction password screen strings-->
+    <string name="change_transaction_password">Change Transaction Password</string>
 
     <!--image descriptions-->
     <string name="app_icon">App icon</string>
     <string name="logo_image">Logo image</string>
+    <string name="scanner_image">Scanner image</string>
 
 
     <!--errors texts-->
@@ -93,5 +114,6 @@
     <string name="err_otp_entry">Please enter OTP code</string>
     <string name="err_complete_your_pin">Please complete your PIN</string>
     <string name="err_pin_mismatch">Pin is not same please re-enter.</string>
+    <string name="err_internet">Please check your internet connection.</string>
 
 </resources>

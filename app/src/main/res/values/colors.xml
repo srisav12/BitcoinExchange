@@ -23,6 +23,10 @@
     <color name="dark_grey_bg_color">#c2c2c2</color>
     <color name="color_green">#198066</color>
     <color name="color_red">#b64957</color>
+    <color name="pressed_tab_color">#143268</color>
+    <color name="login_signup_control_color">#d3d3d3</color>
+    <color name="text_dark_grey_color">#212121</color>
+    <color name="transaction_control_color">#666666</color>
 
 
 

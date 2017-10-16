@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/light_grey_bg_color">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_20">
+
+            <ImageView
+                android:id="@+id/ivbarcode"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@mipmap/barcode" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qrcode_share"
+                android:layout_marginTop="@dimen/dp_10"/>
+
+            <TextView
+                android:id="@+id/tcc_balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="0.00000000 BTC"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btc_balance"
+                android:textSize="@dimen/sp_14"/>
+
+            <TextView
+                android:id="@+id/btc_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/sp_16"
+                android:text="Total Value: 0.00000000 BTC" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textSize="@dimen/sp_16"
+                android:text="@string/my_btc_address" />
+
+            <TextView
+                android:id="@+id/tcpAddressTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/curved_rectangle"
+                android:padding="10dp"
+                android:gravity="center"
+                android:textColor="@color/colorAccent"
+                android:text="4b2323k232309fllk23-09sf02309283098230980293" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:id="@+id/ivcopy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_copy" />
+
+                <ImageView
+                    android:id="@+id/ivshare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@mipmap/ic_share" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="@dimen/dp_5"
+        android:paddingTop="@dimen/dp_5">
+
+        <Button
+            android:id="@+id/btsendtpc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="@string/send_btc"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/wallet_screen_buttons_bg"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+        <Button
+            android:id="@+id/btrecievetpc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp_40"
+            android:layout_weight="1"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:text="@string/receive_btc"
+            android:textColor="@color/colorAccent"
+            android:background="@drawable/wallet_screen_buttons_bg"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

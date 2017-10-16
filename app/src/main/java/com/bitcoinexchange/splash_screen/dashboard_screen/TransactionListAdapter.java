@@ -44,19 +44,22 @@ public class TransactionListAdapter extends RecyclerView.Adapter<TransactionList
             holder.itemView.setBackgroundColor(ContextCompat.getColor(context,R.color.dark_grey_bg_color));
         }
 
-        if(position%2 != 0 && position%3 == 0){
+        holder.logoImage.setImageResource(R.mipmap.ic_logo);
+        /*if(position%2 != 0 && position%3 == 0){
             holder.logoImage.setImageResource(R.drawable.red_circle);
         }else if(position%2 == 0 && position%3 != 0){
             holder.logoImage.setImageResource(R.drawable.green_circle);
         }else{
             holder.logoImage.setImageResource(R.drawable.blue_circle);
-        }
+        }*/
         holder.companyName.setText(item.getCompanyName());
         holder.transactionDate.setText(item.getDate());
         holder.transactionAmt.append(item.getAmount());
         if(item.getSendReceive() == 1){
+            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.mipmap.ic_recieve_32,0,0);
             holder.transactionAmt.setTextColor(ContextCompat.getColor(context, R.color.color_green));
         }else if(item.getSendReceive() == 2){
+            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.mipmap.ic_send_32,0,0);
             holder.transactionAmt.setTextColor(ContextCompat.getColor(context, R.color.color_red));
         }
     }
