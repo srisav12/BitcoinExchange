@@ -18,12 +18,9 @@ import android.widget.TextView;
 
 import com.bitcoinexchange.R;
 import com.bitcoinexchange.splash_screen.change_password_screen.ChangePasswordScreen;
-import com.bitcoinexchange.splash_screen.change_transacion_password_screen.ChangeTransactionPasswordScreen;
 import com.bitcoinexchange.splash_screen.transaction_history_screen.TransactionHistoryScreen;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class DashboardScreen extends AppCompatActivity implements View.OnClickListener {
 
@@ -125,8 +122,8 @@ public class DashboardScreen extends AppCompatActivity implements View.OnClickLi
                     startActivity(changePassIntent);
                     break;
                 case R.id.nav_change_trans_password:
-                    Intent chngTransPassIntent = new Intent(context, ChangeTransactionPasswordScreen.class);
-                    startActivity(chngTransPassIntent);
+                    /*Intent chngTransPassIntent = new Intent(context, ChangeTransactionPasswordScreen.class);
+                    startActivity(chngTransPassIntent);*/
                     break;
             }
             return true;

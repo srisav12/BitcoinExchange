@@ -16,9 +16,7 @@ import com.bitcoinexchange.splash_screen.dashboard_screen.DashboardScreen;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Shashank Rawat on 10/10/2017.
- */
+
 
 public class SecurityPinLoginScreen extends AppCompatActivity implements View.OnClickListener {
 

@@ -14,9 +14,7 @@ import android.widget.TextView;
 import com.bitcoinexchange.R;
 import com.bitcoinexchange.splash_screen.utils.Utilities;
 
-/**
- * Created by Shashank Rawat on 10/11/2017.
- */
+
 
 public class SecureWalletFragment extends Fragment implements View.OnClickListener {
 

@@ -16,9 +16,7 @@ import com.bitcoinexchange.R;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class Utilities {
 

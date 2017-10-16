@@ -33,9 +33,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class LoginScreen extends AppCompatActivity implements View.OnClickListener {
 

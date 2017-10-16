@@ -1,8 +1,6 @@
 package com.bitcoinexchange.splash_screen.dashboard_screen;
 
-/**
- * Created by shashank.rawat on 10-10-2017.
- */
+
 
 public class TransactionPojo {
     private String companyName;

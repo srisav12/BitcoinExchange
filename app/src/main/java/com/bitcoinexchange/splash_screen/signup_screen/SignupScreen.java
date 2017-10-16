@@ -9,20 +9,13 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
-import com.android.volley.Request;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.bitcoinexchange.R;
 import com.bitcoinexchange.splash_screen.security_pin_creation_screen.SecurityPinCreationScreen;
-import com.bitcoinexchange.splash_screen.utils.AppController;
 import com.bitcoinexchange.splash_screen.utils.ConnectionDetector;
-import com.bitcoinexchange.splash_screen.utils.ServiceConstants;
 import com.bitcoinexchange.splash_screen.utils.Utilities;
 
 import org.json.JSONException;
@@ -30,9 +23,7 @@ import org.json.JSONObject;
 
 import dmax.dialog.SpotsDialog;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class SignupScreen extends AppCompatActivity implements View.OnClickListener {
 

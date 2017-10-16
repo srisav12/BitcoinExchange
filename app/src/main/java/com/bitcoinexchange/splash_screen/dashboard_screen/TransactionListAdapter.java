@@ -13,9 +13,7 @@ import com.bitcoinexchange.R;
 
 import java.util.List;
 
-/**
- * Created by shashank.rawat on 10-10-2017.
- */
+
 
 public class TransactionListAdapter extends RecyclerView.Adapter<TransactionListAdapter.ViewHolder> {
 
@@ -56,10 +54,10 @@ public class TransactionListAdapter extends RecyclerView.Adapter<TransactionList
         holder.transactionDate.setText(item.getDate());
         holder.transactionAmt.append(item.getAmount());
         if(item.getSendReceive() == 1){
-            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.mipmap.ic_recieve_32,0,0);
+            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_recieve_32,0,0);
             holder.transactionAmt.setTextColor(ContextCompat.getColor(context, R.color.color_green));
         }else if(item.getSendReceive() == 2){
-            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.mipmap.ic_send_32,0,0);
+            holder.transactionAmt.setCompoundDrawablesWithIntrinsicBounds(0,R.drawable.ic_send_32,0,0);
             holder.transactionAmt.setTextColor(ContextCompat.getColor(context, R.color.color_red));
         }
     }

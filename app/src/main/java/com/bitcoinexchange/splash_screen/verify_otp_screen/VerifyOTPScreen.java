@@ -11,9 +11,7 @@ import android.widget.TextView;
 
 import com.bitcoinexchange.R;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class VerifyOTPScreen extends AppCompatActivity implements View.OnClickListener {
 

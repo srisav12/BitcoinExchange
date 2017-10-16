@@ -7,9 +7,7 @@ import android.widget.TextView;
 
 import com.bitcoinexchange.R;
 
-/**
- * Created by Shashank Rawat on 10/11/2017.
- */
+
 
 public class SendTPCtoOtherScreen extends AppCompatActivity {
 

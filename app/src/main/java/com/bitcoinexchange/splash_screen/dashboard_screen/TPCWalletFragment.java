@@ -14,9 +14,7 @@ import com.bitcoinexchange.R;
 import com.bitcoinexchange.splash_screen.send_tpc_to_other_screen.SendTPCtoOtherScreen;
 import com.bitcoinexchange.splash_screen.utils.Utilities;
 
-/**
- * Created by Shashank Rawat on 10/11/2017.
- */
+
 
 public class TPCWalletFragment extends Fragment implements View.OnClickListener {
 

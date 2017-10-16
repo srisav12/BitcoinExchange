@@ -6,9 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bitcoinexchange.R;
 
-/**
- * Created by Shashank Rawat on 10/11/2017.
- */
 
 public class TransactionDetailsScreen extends AppCompatActivity {
 

@@ -13,9 +13,7 @@ import com.bitcoinexchange.splash_screen.login_screen.LoginScreen;
 import com.bitcoinexchange.splash_screen.signup_screen.SignupScreen;
 import com.bitcoinexchange.splash_screen.utils.Utilities;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class WelcomeScreen extends AppCompatActivity implements View.OnClickListener {
 

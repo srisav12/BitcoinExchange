@@ -16,9 +16,7 @@ import com.bitcoinexchange.splash_screen.utils.SampleDataClass;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by shashank.rawat on 10-10-2017.
- */
+
 
 public class HomeFragment extends Fragment {
 

@@ -14,9 +14,7 @@ import com.bitcoinexchange.R;
 
 import static com.bitcoinexchange.R.id.toolbarTitle;
 
-/**
- * Created by Shashank Rawat on 10/11/2017.
- */
+
 
 public class ChangePasswordScreen extends AppCompatActivity implements View.OnClickListener {
 

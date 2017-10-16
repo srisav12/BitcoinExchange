@@ -18,9 +18,7 @@ import com.bitcoinexchange.R;
 import com.bitcoinexchange.splash_screen.utils.Utilities;
 import com.bitcoinexchange.splash_screen.verify_otp_screen.VerifyOTPScreen;
 
-/**
- * Created by Shashank Rawat on 10/8/2017.
- */
+
 
 public class ForgetPasswordScreen extends AppCompatActivity implements View.OnClickListener {
 
